@@ -4,6 +4,14 @@
   "description": "Community KOOK channel plugin for OpenClaw",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sldcyh/openclaw-kook-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sldcyh/openclaw-kook-plugin/issues"
+  },
+  "homepage": "https://github.com/sldcyh/openclaw-kook-plugin#readme",
   "keywords": [
     "openclaw",
     "plugin",
