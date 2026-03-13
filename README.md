@@ -45,7 +45,7 @@ openclaw plugins install /absolute/path/to/openclaw-kook-plugin
 ## Install from npm
 
 ```bash
-openclaw plugins install @sldcyh/openclaw-kook-plugin@0.1.1
+openclaw plugins install @sldcyh/openclaw-kook-plugin@0.1.2
 ```
 
 After installation, restart the gateway so OpenClaw reloads plugins:

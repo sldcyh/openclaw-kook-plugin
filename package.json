@@ -1,6 +1,6 @@
 {
   "name": "@sldcyh/openclaw-kook-plugin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Community KOOK channel plugin for OpenClaw",
   "type": "module",
   "license": "MIT",
