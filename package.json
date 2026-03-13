@@ -1,5 +1,5 @@
 {
-  "name": "@sldcyh/openclaw-kook-plugin",
+  "name": "@sldcyh/kook",
   "version": "0.1.0",
   "description": "Community KOOK channel plugin for OpenClaw",
   "type": "module",
@@ -63,7 +63,7 @@
       "order": 62
     },
     "install": {
-      "npmSpec": "@sldcyh/openclaw-kook-plugin",
+      "npmSpec": "@sldcyh/kook",
       "localPath": "projects/openclaw-kook-plugin",
       "defaultChoice": "npm"
     }

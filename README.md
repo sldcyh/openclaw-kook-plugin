@@ -44,7 +44,7 @@ openclaw plugins install --link /absolute/path/to/openclaw-kook-plugin
 ## Install from npm
 
 ```bash
-openclaw plugins install @sldcyh/openclaw-kook-plugin
+openclaw plugins install @sldcyh/kook
 ```
 
 After installation, confirm the plugin is loaded:
