@@ -37,24 +37,56 @@ Optional:
 ## Install from source
 
 ```bash
-npm install
-openclaw plugins install --link /absolute/path/to/openclaw-kook-plugin
+git clone https://github.com/sldcyh/openclaw-kook-plugin.git
+cd openclaw-kook-plugin
+openclaw plugins install /absolute/path/to/openclaw-kook-plugin
 ```
 
 ## Install from npm
 
 ```bash
-openclaw plugins install @sldcyh/openclaw-kook-plugin
+openclaw plugins install @sldcyh/openclaw-kook-plugin@0.1.1
 ```
 
-After installation, confirm the plugin is loaded:
+After installation, restart the gateway so OpenClaw reloads plugins:
+
+```bash
+openclaw gateway restart
+```
+
+Then add a KOOK account:
+
+```bash
+openclaw channels add --channel kook --token YOUR_KOOK_BOT_TOKEN
+```
+
+If you prefer storing the token in an environment variable instead of config:
+
+```bash
+export KOOK_BOT_TOKEN="your-kook-bot-token"
+openclaw channels add --channel kook --use-env
+```
+
+Optional flags:
+
+- `--account <id>` to create a named KOOK account
+- `--name <display-name>` to label the account in OpenClaw
+
+## Verify install
 
 ```bash
 openclaw plugins list
+openclaw channels list
 openclaw channels status
 ```
 
-## Minimal config
+You should see:
+
+- plugin `openclaw-kook-plugin` loaded
+- channel `KOOK default` configured
+- after the gateway connects, `running, connected`
+
+## Config shape
 
 ```json5
 {
@@ -67,12 +99,6 @@ openclaw channels status
     }
   }
 }
-```
-
-Use an environment variable if you do not want the token stored in config:
-
-```bash
-export KOOK_BOT_TOKEN="your-kook-bot-token"
 ```
 
 ## Behavior notes
