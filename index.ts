@@ -4,7 +4,7 @@ import { kookPlugin } from "./src/channel.js";
 import { setKookRuntime } from "./src/runtime.js";
 
 const plugin = {
-  id: "kook",
+  id: "openclaw-kook-plugin",
   name: "KOOK",
   description: "KOOK channel plugin",
   configSchema: emptyPluginConfigSchema(),
@@ -15,4 +15,3 @@ const plugin = {
 };
 
 export default plugin;
-
