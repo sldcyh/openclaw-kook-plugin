@@ -1,0 +1,63 @@
+{
+  "name": "@sldcyh/openclaw-kook-plugin",
+  "version": "0.1.0",
+  "description": "Community KOOK channel plugin for OpenClaw",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "openclaw",
+    "plugin",
+    "kook",
+    "kaiheila",
+    "bot"
+  ],
+  "files": [
+    "index.ts",
+    "openclaw.plugin.json",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check": "tsc -p tsconfig.json --noEmit",
+    "pack:check": "npm pack --dry-run"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "ws": "^8.18.3"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.3.11"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.5.14",
+    "openclaw": "2026.3.11",
+    "typescript": "^5.9.2"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "channel": {
+      "id": "kook",
+      "label": "KOOK",
+      "selectionLabel": "KOOK (plugin)",
+      "detailLabel": "KOOK Bot",
+      "docsPath": "/channels/kook",
+      "docsLabel": "kook",
+      "blurb": "KOOK bot plugin with WebSocket events and basic DM/channel replies.",
+      "aliases": [
+        "kaiheila",
+        "开黑啦"
+      ],
+      "order": 62
+    },
+    "install": {
+      "npmSpec": "@sldcyh/openclaw-kook-plugin",
+      "localPath": "projects/openclaw-kook-plugin",
+      "defaultChoice": "npm"
+    }
+  }
+}
